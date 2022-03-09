@@ -3,11 +3,113 @@
 
 <head>
     <title>CDL - Checkout System</title>
+
+    <link rel="stylesheet" href="style.css">
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
 
-<body>
+<body style="padding:5%">
+    <div class="pre-checkout">
+        <h2>Shop Setup</h2>
+        <div class="shop-input-wrap">
+            <div class="col">
+                <h3>Item A</h3>
+                <div class="item-setup-wrap">
+                    <div class="item-setup-inputs"> 
+                        <label for="item-a-price">Price</label>
+                        <input type="number" name="item-a-price" id="item-a-price">
+                    </div>
+                    <div class="item-setup-inputs"> 
+                        <label for="no-offer">No Discount</label>
+                        <input type="checkbox" name="item-a-check" id="item-a-check">
+                    </div>                    
+                    <div class="item-setup-inputs"> 
+                        <label for="item-a-offer-amount">How many items to activate offer?</label>
+                        <input type="number" name="item-a-offer-amount" id="item-a-offer-amount">
+                    </div>
+
+                    <div class="item-setup-inputs"> 
+                        <label for="item-a-offer-price">Discounted amount:</label>
+                        <input type="number" name="item-a-offer-price" id="item-a-offer-price">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <h3>Item B</h3>
+                <div class="item-setup-wrap">
+                    <div class="item-setup-inputs"> 
+                        <label for="item-b-price">Price</label>
+                        <input type="number" name="item-b-price" id="item-b-price">
+                    </div>
+                    <div class="item-setup-inputs"> 
+                        <label for="no-offer">No Discount</label>
+                        <input type="checkbox" name="item-b-check" id="item-b-check">
+                    </div>                    
+                    <div class="item-setup-inputs"> 
+                        <label for="item-b-offer-amount">How many items to activate offer?</label>
+                        <input type="number" name="item-b-offer-amount" id="item-b-offer-amount">
+                    </div>
+
+                    <div class="item-setup-inputs"> 
+                        <label for="item-b-offer-price">Discounted amount:</label>
+                        <input type="number" name="item-b-offer-price" id="item-b-offer-price">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <h3>Item C</h3>
+                <div class="item-setup-wrap">
+                    <div class="item-setup-inputs"> 
+                        <label for="item-c-price">Price</label>
+                        <input type="number" name="item-c-price" id="item-c-price">
+                    </div>
+
+                    <div class="item-setup-inputs"> 
+                        <label for="no-offer">No Discount</label>
+                        <input type="checkbox" name="item-c-check" id="item-c-check">
+                    </div>                    
+                    <div class="item-setup-inputs"> 
+                        <label for="item-c-offer-amount">How many items to activate offer?</label>
+                        <input type="number" name="item-c-offer-amount" id="item-c-offer-amount">
+                    </div>
+
+                    <div class="item-setup-inputs"> 
+                        <label for="item-c-offer-price">Discounted amount:</label>
+                        <input type="number" name="item-c-offer-price" id="item-c-offer-price">
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <h3>Item D</h3>
+                <div class="item-setup-wrap">
+                    <div class="item-setup-inputs"> 
+                        <label for="item-d-price">Price</label>
+                        <input type="number" name="item-d-price" id="item-d-price">
+                    </div>
+                    <div class="item-setup-inputs"> 
+                        <label for="no-offer">No Discount</label>
+                        <input type="checkbox" name="item-d-check" id="item-d-check">
+                    </div>                    
+                    <div class="item-setup-inputs"> 
+                        <label for="item-d-offer-amount">How many items to activate offer?</label>
+                        <input type="number" name="item-d-offer-amount" id="item-d-offer-amount">
+                    </div>
+
+                    <div class="item-setup-inputs"> 
+                        <label for="item-d-offer-price">Discounted amount:</label>
+                        <input type="number" name="item-d-offer-price" id="item-d-offer-price">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <button id="submit-item-info">Done</button>
+    </div>
     <div class="checkout-view-wrap">
         <div class="items">
             <button id="item-a">A</button>
@@ -15,8 +117,12 @@
             <button id="item-c">C</button>
             <button id="item-d">D</button>
         </div>
-        <p>Total</p><span id="total">0</span>
-        <p>Item Count</p><span id="item-count">0</span>
+        <div>
+            <p>Total</p><span id="total">0</span>
+        </div>
+        <div>
+            <p>Number of items</p><span id="item-count">0</span>
+        </div>
     </div>
 </body>
 

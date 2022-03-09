@@ -1,0 +1,27 @@
+h1,h2,h3 {
+    margin-top:0;
+}
+.shop-input-wrap {
+    display:flex;
+    justify-content:space-between;
+}
+.shop-input-wrap .col {
+    width:20%;
+    border:2px solid #d0d0d0;
+    border-radius:5px;
+    padding:20px
+}
+.item-setup-inputs input{
+    width:40px;
+}
+.item-setup-inputs{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+.item-setup-inputs:nth-last-child(1){
+    margin-bottom:0;
+}
+.checkout-view-wrap {
+/*    display: none;*/
+}
