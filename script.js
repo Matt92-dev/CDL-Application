@@ -122,47 +122,71 @@ jQuery(document).ready(function () {
         getItemBInfo();
         getItemCInfo();
         getItemDInfo();
+        $('.pre-checkout').css("display", "none");
+        $('.checkout-view-wrap').css("display", "block");
+    })
+    
+    //Reset Variables and go back to item input
+    $('#reset-application').click(function() {
+        $('.pre-checkout').css("display", "block");
+        $('.checkout-view-wrap').css("display", "none");
+        var itemA = 0.5;
+        var itemAOfferCount = 0;
+        var itemAOfferInt = 3;
+        var itemAOfferAmount = .3;
+        var itemB = 0.3;
+        var itemBOfferCount = 0;
+        var itemBOfferInt = 2;
+        var itemBOfferAmount = .15;
+        var itemC = 0.2;
+        var itemCOfferCount = 0;
+        var itemCOfferInt = 2;
+        var itemCOfferAmount = .15;
+        var itemD = 0.15;
+        var itemDOfferCount = 0;
+        var itemDOfferInt = 2;
+        var itemDOfferAmount = .15;
     })
 
 });
 
 function getItemAInfo() {
         itemA = parseFloat($("#item-a-price").val());
-        itemAOfferInt = parseFloat($("#item-a-offer-amount").val());
-        itemAOfferAmount = parseFloat($("#item-a-offer-price").val());
         if ($('#item-a-check').is(":checked")) {
             noOfferA = true;
         } else {
             noOfferA = false;
+            itemAOfferInt = parseFloat($("#item-a-offer-amount").val());
+            itemAOfferAmount = parseFloat($("#item-a-offer-price").val());
         }
 }
 function getItemBInfo() {
         itemB = parseFloat($("#item-b-price").val());
-        itemBOfferInt = parseFloat($("#item-b-offer-amount").val());
-        itemBOfferAmount = parseFloat($("#item-b-offer-price").val());
         if ($('#item-b-check').is(":checked")) {
             noOfferB = true;
         } else {
+            itemBOfferInt = parseFloat($("#item-b-offer-amount").val());
+            itemBOfferAmount = parseFloat($("#item-b-offer-price").val());
             noOfferB = false;
         }
 }
 function getItemCInfo() {
         itemC = parseFloat($("#item-c-price").val());
-        itemCOfferInt = parseFloat($("#item-c-offer-amount").val());
-        itemCOfferAmount = parseFloat($("#item-c-offer-price").val());
         if ($('#item-c-check').is(":checked")) {
             noOfferC = true;
         } else {
+            itemCOfferInt = parseFloat($("#item-c-offer-amount").val());
+            itemCOfferAmount = parseFloat($("#item-c-offer-price").val());
             noOfferC = false;
         }
 }
 function getItemDInfo() {
         itemD = parseFloat($("#item-d-price").val());
-        itemDOfferInt = parseFloat($("#item-d-offer-amount").val());
-        itemDOfferAmount = parseFloat($("#item-d-offer-price").val());
         if ($('#item-d-check').is(":checked")) {
             noOfferD = true;
         } else {
+            itemDOfferInt = parseFloat($("#item-d-offer-amount").val());
+            itemDOfferAmount = parseFloat($("#item-d-offer-price").val());
             noOfferD = false;
         }
 }
